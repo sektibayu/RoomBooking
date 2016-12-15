@@ -30,15 +30,15 @@
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown"> Login Admin</a>
 						<ul class="dropdown-menu" role="menu">
 							<div class="col-sm-12">
-								<form role="form" method="post" action="admin.html">
-								
+								<form role="form" method="post" action="{{ URL::to('login') }}">
+									{!! csrf_field() !!}
 									<div class="form-group">
 										<label>Nama:</label>
-										<input type="text" class="form-control">
+										<input type="text" class="form-control" name="username">
 									</div>						
 									<div class="form-group">
 										<label>Password:</label>
-										<input type="password" class="form-control">
+										<input type="password" class="form-control" name="password">
 									</div>
 									<button type="submit" class="btn btn-primary">login</button>
 								</form>
@@ -48,17 +48,17 @@
 				</ul>
 				<ul class="user-menu">
 					<li>
-						<a href="form.html"> Tambah User</a>
+						<a href="{{ URL::to('form') }}"> Tambah User</a>
 					</li>
 				</ul>
 				<ul class="user-menu">
 					<li>
-						<a href="reservasi.html"> Reservasi</a>
+						<a href="{{ URL::to('reservasi') }}"> Reservasi</a>
 					</li>
 				</ul>
 				<ul class="user-menu">
 					<li>
-						<a href="jadwal.html"> Jadwal Pinjam</a>
+						<a href="{{ URL::to('') }}"> Jadwal Pinjam</a>
 					</li>
 				</ul>
 			</div>			
