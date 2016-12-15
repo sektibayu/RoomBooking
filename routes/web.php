@@ -12,17 +12,21 @@
 */
 
 Route::get('/', function () {
-    return view('pages');
+    return view('pages.index');
+});
+
+Route::get('/RoomBooking/public/a', function () {
+    return view('pages.index');
 });
 
 Route::get('reservasi', function () {
     return view('pages.reservasi');
 });
 
-Route::get('/form', function () {
+Route::get('form', function () {
     return view('pages.form');
 });
 
-Route::get('/admin', function () {
+Route::get('admin', function () {
     return view('pages.admin');
 });
