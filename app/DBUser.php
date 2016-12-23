@@ -15,6 +15,6 @@ class DBUser extends Model
 
  	public function reservation()
  	{
- 		return $this->hasMany('App/DBReservation');
+ 		return $this->hasMany('App\DBReservation');
  	}
 }
