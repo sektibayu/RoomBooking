@@ -24,11 +24,13 @@ Route::post('login', array(
 		'as' => 'login'
 		));
 
-Route::group(['middleware' => 'auth'], function () {
-	
-	Route::get('admin', function () {
+Route::get('admin', function () {
 	    return view('pages.admin');
 	});
+
+Route::group(['middleware' => ['auth']], function () {
+	
+	
 
 	Route::get('form', function () {
 	    return view('pages.form');

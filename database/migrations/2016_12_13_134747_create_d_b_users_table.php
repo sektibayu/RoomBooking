@@ -16,6 +16,7 @@ class CreateDBUsersTable extends Migration
         Schema::create('User', function (Blueprint $table) {
             $table->increments('NRP_NIP');
             $table->string('name');
+            $table->string('password');
         });
     }
 

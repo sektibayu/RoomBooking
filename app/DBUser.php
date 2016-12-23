@@ -2,10 +2,13 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class DBUser extends Model
+class DBUser extends Authenticatable
 {
+	use Notifiable;
+
     protected $table='user';
  	protected $primaryKey='nrp_nip';
     public $timestamps=false;

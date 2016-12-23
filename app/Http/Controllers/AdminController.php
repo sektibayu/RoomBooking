@@ -1,16 +1,18 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
     public function login(Request $request){
         // dd($request->all());
-    	if(Auth::attempt(['username' => $request->input('username'), 'password' => $request->input('password')])){
+    	if(Auth::attempt(['NRP_NIP' => $request->input('username'), 'password' => $request->input('password')])){
+            // dd("masuk");
     		return redirect('admin');
     	}
+        // dd("tidak smasuk");
     	return redirect()->back();
     }
 
