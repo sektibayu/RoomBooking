@@ -15,9 +15,7 @@ Route::get('/', function () {
     return view('pages.index');
 });
 
-Route::get('reservasi', function () {
-    return view('pages.reservasi');
-});
+Route::get('reservasi','ReservationController@DisplayPendingRequest');
 Route::post('login', array(
 		'before' => 'csrf', 
 		'uses' => 'AdminController@login', 
@@ -36,3 +34,5 @@ Route::group(['middleware' => ['auth']], function () {
 	    return view('pages.form');
 	});
 });
+
+route::post('reservasi','ReservationController@ReservationInput');

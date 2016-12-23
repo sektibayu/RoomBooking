@@ -18,6 +18,6 @@ class DBUser extends Authenticatable
 
  	public function reservation()
  	{
- 		return $this->hasMany('App/DBReservation');
+ 		return $this->hasMany('App\DBReservation');
  	}
 }
