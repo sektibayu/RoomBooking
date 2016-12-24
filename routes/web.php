@@ -26,13 +26,13 @@ Route::get('admin', function () {
 	    return view('pages.admin');
 	});
 
-Route::group(['middleware' => ['auth']], function () {
-	
-	
-
+	Route::get('admin/logout','AdminController@logout');
 	Route::get('form', function () {
 	    return view('pages.form');
 	});
+Route::group(['middleware' => ['auth']], function () {
+	
+
 });
 
 route::post('reservasi','ReservationController@ReservationInput');

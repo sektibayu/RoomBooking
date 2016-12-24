@@ -14,8 +14,8 @@ class CreateDBRoomsTable extends Migration
     public function up()
     {
         Schema::create('Room', function (Blueprint $table) {
-            $table->increments('Room_id');
-            $table->string('Room_name');
+            $table->increments('room_id');
+            $table->string('room_name');
         });
     }
 

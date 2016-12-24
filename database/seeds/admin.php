@@ -15,7 +15,7 @@ class admin extends Seeder
         DB::table('user')->delete();
         $admin = new DBUser;
         // $admin->userid = '1';
-        $admin->NRP_NIP = 10000;
+        $admin->NRP_NIP = '10000';
         $admin->name = 'admin';
         $admin->password = 'admin';
         $admin->password = bcrypt($admin->password);

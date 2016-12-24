@@ -13,7 +13,7 @@ class AdminController extends Controller
     		return redirect('admin');
     	}
         // dd("tidak smasuk");
-    	return redirect()->back();
+    	return view('pages.index');
     }
 
     public function logout(){
